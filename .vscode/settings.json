@@ -7,6 +7,8 @@
             "icon": "terminal-cmd",
         },
     },
+    "terminal.integrated.cwd": "${workspaceFolder}",
+    "terminal.integrated.defaultProfile.windows": "CMD (venv)",
 
     "debug.terminal.clearBeforeReusing": true,
 
