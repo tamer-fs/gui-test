@@ -1,0 +1,19 @@
+{
+    "terminal.integrated.profiles.windows": {
+        "CMD (venv)": {
+            "path": "C:\\WINDOWS\\System32\\cmd.exe",
+            "args": ["/K", "python", "-m", "pipenv", "shell"],
+            "overrideName": true,
+            "icon": "terminal-cmd",
+        },
+    },
+
+    "debug.terminal.clearBeforeReusing": true,
+
+    "files.exclude": {
+        "**/.c": true,
+        "**/.pyd": true,
+    },
+
+    "black-formatter.args": ["--line-length=100"],
+}
