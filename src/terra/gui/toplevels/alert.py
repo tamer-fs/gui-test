@@ -10,6 +10,7 @@ class AlertTopLevel(ctk.CTkToplevel):
         title: str,
         text: str,
         button_text: str = 'OK',
+        bell: bool = True,
         width: int = 450,
         height: int = 150,
         fg_color: Optional[Union[str, Tuple[str, str]]] = None, 
@@ -34,9 +35,13 @@ class AlertTopLevel(ctk.CTkToplevel):
         # message
         self.message_label = ctk.CTkLabel(self, text=text)
         self.message_label.grid(row=0, column=0, padx=(10, 10), pady=(10, 0), sticky="nswe")
-        
+           
+        # close button
         self.close_button = ctk.CTkButton(self, text="close", command=self.destroy)
         self.close_button.grid(row=1, column=0, padx=(10, 10), pady=(10, 10))
+        
+        if bell:
+            self.bell()
         
         # prevent using app
         self.grab_set()
